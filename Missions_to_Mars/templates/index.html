@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Challenge</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body style="padding: 16px">
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Mision To Mars</h1>
+            <a class="btn btn-primary btn-lg" href="scrape" >Scrape</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2><b>Latest Mars News</b></h2>
+        <h3>{{info.mars_news.Titles[0]}}</h3>
+        <h4><em>{{info.mars_news.Articles[0]}}</em></h4>
+    </div>
+    <hr class="container"/>
+    <article class="container" style="margin-top: 16px;">
+        <h2><b>Mars Featured Image</b></h2>
+        <img src={{info.mars_featured_image}} alt="Mars Featured Image" />
+    </article>
+    <hr class="container" />
+    <article class="container">
+        <h2>Mars Information</h2>
+        <div style="padding: 16px">
+            <h3>Weather on Mars</h3>
+            <p>{{info.mars_weather}}</p>
+        </div>
+        <h2>Mars Facts</h2>
+        <table border="1" class="dataframe">
+          <thead>
+            <tr style="text-align: right;">
+              <th>Property</th>
+              <th>Measures</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Equatorial Diameter:</td>
+              <td>6,792 km</td>
+            </tr>
+            <tr>
+              <td>Polar Diameter:</td>
+              <td>6,752 km</td>
+            </tr>
+            <tr>
+              <td>Mass:</td>
+              <td>6.39 × 10^23 kg (0.11 Earths)</td>
+            </tr>
+            <tr>
+              <td>Moons:</td>
+              <td>2 (Phobos &amp; Deimos)</td>
+            </tr>
+            <tr>
+              <td>Orbit Distance:</td>
+              <td>227,943,824 km (1.38 AU)</td>
+            </tr>
+            <tr>
+              <td>Orbit Period:</td>
+              <td>687 days (1.9 years)</td>
+            </tr>
+            <tr>
+              <td>Surface Temperature:</td>
+              <td>-87 to -5 °C</td>
+            </tr>
+            <tr>
+              <td>First Record:</td>
+              <td>2nd millennium BC</td>
+            </tr>
+            <tr>
+              <td>Recorded By:</td>
+              <td>Egyptian astronomers</td>
+            </tr>
+          </tbody>
+        </table>
+    </article>
+</body>
+</html>
